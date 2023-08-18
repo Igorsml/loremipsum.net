@@ -1,6 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import "./variables.scss";
+
+body {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1 0 auto;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+input[type="file"] {
+  display: none;
 }
 
 ._container {
@@ -20,6 +38,7 @@ a {
   width: 100%;
   background: rgba(16, 16, 29, 0.9);
   opacity: 0.9;
+  position: fixed;
 }
 
 .header_container {
@@ -41,4 +60,59 @@ a {
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
+
+  &:hover {
+    @include scale-item;
+  }
+}
+
+.order-slider {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.order-slider__info {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.order-slider__value {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.order-slider__input {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.input-file {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  background-color: $bgColor;
+
+  & a {
+    color: white;
+  }
+}
+
+.footer-body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-shrink: 0;
+  height: 80px;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
 }
