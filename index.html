@@ -16,26 +16,26 @@
 </head>
 
 <body>
-  <header class="header _container">
+  <header class="header">
     <div class="header_container _container">
       <div class="header__logo">
         <a href="/" class="header__logo">
           <img src="./assets/img/logo.svg" alt="Логотип">
         </a>
       </div>
-      <nav class="header__menu">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="#" class="menu__link hover__underline">Бизнес</a>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item active">
+            <a href="#" class="nav__link hover__underline">Бизнес</a>
           </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link hover__underline">О нас</a>
+          <li class="nav__item">
+            <a href="#" class="nav__link hover__underline">О нас</a>
           </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link hover__underline">Цены</a>
+          <li class="nav__item">
+            <a href="#" class="nav__link hover__underline">Цены</a>
           </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link hover__underline">Оформить заказ</a>
+          <li class="nav__item">
+            <a href="#" class="nav__link hover__underline">Оформить заказ</a>
           </li>
         </ul>
       </nav>
@@ -44,67 +44,78 @@
 
   <!-- Main -->
   <main class="main _container">
-    <section class="presentation">
-      <h1>Lorem ipsum dolor sit amet
-        consectetur adipiscing</h1>
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
-      <ul>
-        <li>Totam rem aperiam eaque ipsa</li>
-        <li>Sit voluptatem accusantium doloremque laudantium</li>
-        <li>Sed ut perspiciatis, unde omnis iste natus error</li>
-      </ul>
-      <button class="presentation__button">Заказать</button>
-      <a href="#" target="_blank">Подробнее</a>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content _container">
+          <h1>Lorem ipsum dolor sit amet
+            consectetur adipiscing</h1>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+          <ul>
+            <li>Totam rem aperiam eaque ipsa</li>
+            <li>Sit voluptatem accusantium doloremque laudantium</li>
+            <li>Sed ut perspiciatis, unde omnis iste natus error</li>
+          </ul>
+          <button class="presentation__button">Заказать</button>
+          <a href="#" target="_blank">Подробнее</a>
+        </div>
+      </div>
     </section>
 
-    <section class="order">
-      <h2>Оформление Заказа</h2>
-      <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
-      <div class="benefits">
-        <div class="benefits__item"></div>
-      </div>
-
-      <form id="order-form" action="#" method="post">
-        <div class="order-form">
-          <select name="type-system" placeholder="Выберите тип системы">
-            <option value="volvo">Sed ut perspiciatis</option>
-            <option value="saab">Nemo enim ipsam</option>
-            <option value="fiat">Et harum quidem</option>
-            <option value="audi">Temporibus autem</option>
-            <option value="audi">Itaque earum rerum</option>
-          </select>
-          <input type="email" name="email" placeholder="Ваш email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
-          <input type="text" name="name" placeholder="Ваше имя">
-
-          <div class="order-slider">
-            <div class="order-slider__info">Sed ut perspiciatis, unde omnis iste natus</div>
-            <div id="order-slider__value"></div>
-            <input type="range" min="1" max="100" value="75" class="order-slider__input" id="systemSlider">
+    <section class="hero order">
+      <div class="order-container">
+        <div class="order-content _container">
+          <h2 class="order__title">Оформление <span>Заказа</span></h2>
+          <p class="order__description">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+          <div class="benefits">
+            <div class="benefits__item"></div>
           </div>
 
-          <form enctype="multipart/form-data">
-            <label class="input-file" for="order-slider__file" hidden>
-              <input id="order-slider__file" type="file" name="file">
-              <svg class="order-slider__file-icon">
-                <use xlink:href="#doc"></use>
-              </svg>Прикрепить файл
-            </label>
+          <form class="order-form" id="order-form" action="#" method="post">
+            <select name="type-system" placeholder="Выберите тип системы">
+              <option value="volvo">Sed ut perspiciatis</option>
+              <option value="saab">Nemo enim ipsam</option>
+              <option value="fiat">Et harum quidem</option>
+              <option value="audi">Temporibus autem</option>
+              <option value="audi">Itaque earum rerum</option>
+            </select>
+            <input type="email" name="email" placeholder="Ваш email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+              required>
+            <input type="text" name="name" placeholder="Ваше имя">
 
-            <button type="submit">Отправить заявку</button>
+
           </form>
+          <div class="order-slider">
+            <div class="order-range">
+              <div class="order-slider__info">Sed ut perspiciatis, unde omnis iste natus</div>
+              <div id="order-slider__value"></div>
+              <input type="range" min="1" max="100" value="75" class="order-slider__input" id="systemSlider">
+            </div>
+            <div class="order-file">
+              <form enctype="multipart/form-data">
+                <label class="input-file" for="order-slider__file" hidden>
+                  <input id="order-slider__file" type="file" name="file">
+                  <svg class="order-slider__file-icon">
+                    <use xlink:href="#doc"></use>
+                  </svg>
+                  <span>Прикрепить файл</span>
+                </label>
+              </form>
+            </div>
+          </div>
+          <button type="submit">Отправить заявку</button>
         </div>
-      </form>
+      </div>
     </section>
   </main>
   <!-- Main -->
 
   <!-- Footer -->
-  <footer class="footer _container">
-    <div class="footer-body">
-      <div>© 2018 —
+  <footer class="footer">
+    <div class="footer-body _container">
+      <p>© 2018 —
         <script>document.write(new Date().getFullYear())</script> «LoremIpsum.net» Все права защищены.
-      </div>
-      <svg>
+      </p>
+      <svg class="footer-body__separator">
         <use xlink:href="#separator"></use>
       </svg>
       <div class="payment-methods">
@@ -114,39 +125,36 @@
           </svg>
           <span class="payment-methods__title">Qiwi wallet</span>
         </div>
-        <div class="payment-methods">
-          <div class="payment-methods__item">
-            <svg class="payment-methods__icon">
-              <use xlink:href="#you-money"></use>
-            </svg>
-            <span class="payment-methods__title">Yandex Money</span>
-          </div>
+        <div class="payment-methods__item">
+          <svg class="payment-methods__icon">
+            <use xlink:href="#you-money"></use>
+          </svg>
+          <span class="payment-methods__title">Yandex Money</span>
         </div>
-        <div class="payment-methods">
-          <div class="payment-methods__item">
-            <svg class="payment-methods__icon">
-              <use xlink:href="#web-money"></use>
-            </svg>
-            <span class="payment-methods__title">Web Money</span>
-          </div>
+        <div class="payment-methods__item">
+          <svg class="payment-methods__icon">
+            <use xlink:href="#web-money"></use>
+          </svg>
+          <span class="payment-methods__title">Web Money</span>
         </div>
-        <div class="social">
-          <div class="social__item">
-            <svg class="social__item-icon">
-              <use xlink:href="#email-footer"></use>
-            </svg>
-            <a href="mailto:info@ipsum228.com?subject=Lorem&body=Привет, loremipsumnet! 228 — это номер статьи Уголовного кодекса России, который стал популярным в молодежной среде интернет-мемом. Обычно статью 228 назначают за «Незаконное приобретение, хранение, перевозка, изготовление, переработка наркотических средств, психотропных веществ или их аналогов»."
-              target="_blank">info@ipsum228.com</a>
-          </div>
-          <div class="social__item">
-            <a href="https://vk.com/durov" target="_blank">
-              <svg class="social__item-icon">
-                <use xlink:href="#vk"></use>
-              </svg>
-              Мы
-              вконтакте</a>
-          </div>
-        </div>
+      </div>
+      <svg class="footer-body__separator">
+        <use xlink:href="#separator"></use>
+      </svg>
+      <div class="social__item">
+        <a class="social__item-link"
+          href="mailto:info@ipsum228.com?subject=Lorem&body=Привет, loremipsumnet! 228 — это номер статьи Уголовного кодекса России, который стал популярным в молодежной среде интернет-мемом. Обычно статью 228 назначают за «Незаконное приобретение, хранение, перевозка, изготовление, переработка наркотических средств, психотропных веществ или их аналогов»."
+          target="_blank"> <svg class="social__item-icon">
+            <use xlink:href="#email-footer"></use>
+          </svg><span>info@ipsum228.com</span></a>
+      </div>
+      <div class="social__item">
+        <a class="social__item-link" href="https://vk.com/durov" target="_blank">
+          <svg class="social__item-icon">
+            <use xlink:href="#vk"></use>
+          </svg>
+          <span>Мы вконтакте</span>
+        </a>
       </div>
     </div>
   </footer>
