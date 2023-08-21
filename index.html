@@ -20,7 +20,7 @@
     <div class="header_container _container">
       <div class="header__logo">
         <a href="/" class="header__logo">
-          <!-- <img src="./assets/img/logo.svg" alt="Логотип"> -->
+          <img src="./assets/img/logo.svg" alt="Логотип">
         </a>
       </div>
       <nav class="header__nav nav">
@@ -47,16 +47,16 @@
     <section class="hero">
       <div class="hero-container">
         <div class="hero-content _container">
-          <h1>Lorem ipsum dolor sit amet
-            consectetur adipiscing</h1>
+          <h1 class="hero__container-title"><span style="color: #3e9cdc;">Lorem ipsum</span> dolor sit amet
+            consectetur <span style="color: #3e9cdc;">adipiscing</span></h1>
           <p>At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
           <ul>
             <li>Totam rem aperiam eaque ipsa</li>
             <li>Sit voluptatem accusantium doloremque laudantium</li>
             <li>Sed ut perspiciatis, unde omnis iste natus error</li>
           </ul>
-          <button class="presentation__button">Заказать</button>
-          <a href="#" target="_blank">Подробнее</a>
+          <button class="presentation__button btn">Заказать</button>
+          <a class="hero-content__button btn" href="#" target="_blank">Подробнее</a>
         </div>
       </div>
     </section>
@@ -67,14 +67,13 @@
           <h2 class="order__title">Оформление <span>Заказа</span></h2>
           <p class="order__description">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
           <div class="benefits">
-            <div class="dots"></div>
             <div class="benefits__item-wrap">
               <div class="benefits__item">
                 <svg class="benefits__item-icon">
                   <use xlink:href="#search"></use>
                 </svg>
               </div>
-              <p>Lorem ipsum dolor sit amet</p>
+              <p class="benefits__item-title">Lorem ipsum dolor sit amet</p>
             </div>
             <div class="dots"></div>
             <div class="benefits__item-wrap">
@@ -83,7 +82,7 @@
                   <use xlink:href="#percentage"></use>
                 </svg>
               </div>
-              <p>Сonsecteturadipiscing elit</p>
+              <p class="benefits__item-title">Сonsecteturadipiscing elit</p>
             </div>
             <div class="dots"></div>
             <div class="benefits__item-wrap">
@@ -92,7 +91,7 @@
                   <use xlink:href="#doc-benefit"></use>
                 </svg>
               </div>
-              <p>Sed do eiusmod tempor</p>
+              <p class="benefits__item-title">Sed do eiusmod tempor</p>
             </div>
             <div class="dots"></div>
             <div class="benefits__item-wrap">
@@ -101,7 +100,7 @@
                   <use xlink:href="#email"></use>
                 </svg>
               </div>
-              <p>Esse cillum dolore eu fugiat</p>
+              <p class="benefits__item-title">Esse cillum dolore eu fugiat</p>
             </div>
             <div class="dots"></div>
             <div class="benefits__item-wrap">
@@ -110,7 +109,7 @@
                   <use xlink:href="#rub100"></use>
                 </svg>
               </div>
-              <p>Excepteur sint occaecat cupidatat non proident</p>
+              <p class="benefits__item-title">Excepteur sint occaecat cupidatat non proident</p>
             </div>
           </div>
 
@@ -127,13 +126,12 @@
             <input type="email" name="email" placeholder="Ваш email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
               required>
             <input type="text" name="name" placeholder="Ваше имя">
-
-
           </form>
+
           <div class="order-slider">
             <div class="order-range">
-              <div class="order-slider__info">Sed ut perspiciatis, unde omnis iste natus</div>
-              <div id="order-slider__value"></div>
+              <div class="order-slider__info">Sed ut perspiciatis, unde omnis iste natus <span
+                  id="order-slider__value"></span></div>
               <input type="range" min="1" max="100" value="75" class="order-slider__input" id="systemSlider">
             </div>
             <div class="order-file">

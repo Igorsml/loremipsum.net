@@ -120,11 +120,43 @@ input[type="file"] {
   background-repeat: no-repeat;
 }
 
+.hero-content {
+  max-width: 780px;
+}
+
+.hero__container-title {
+  text-transform: uppercase;
+}
+
+.order-file__btn {
+  background: #3e9cdc;
+  border-radius: 4px;
+  color: $whiteColor;
+  border: 1px solid $whiteColor;
+}
+
+.hero-content__button {
+  border-radius: 3px;
+  border: 2px solid #3e9cdc;
+  background: $whiteColor;
+  color: #272733;
+}
+
 .benefits {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.benefits__item-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  width: 170px;
+  text-align: center;
 }
 
 .benefits__item {
@@ -145,10 +177,9 @@ input[type="file"] {
 }
 
 .dots {
-  border-top: dotted 6px #ad1616;
-  width: 1.5em;
+  border-top: dotted 6px #c4c4c4;
+  width: 3.5em;
   height: 3em;
-  margin: auto 2em;
 }
 
 .order {
@@ -166,6 +197,7 @@ input[type="file"] {
 
 .order-content {
   width: 100%;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -195,6 +227,8 @@ input[type="file"] {
 
   & input {
     padding: 10px;
+    width: 370px;
+    max-width: 100%;
     justify-content: space-between;
     align-items: center;
 
@@ -253,15 +287,15 @@ input[type="file"] {
 .order-slider {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .order-range {
   flex-grow: 3;
-  width: 90%;
 }
 
 .order-file {
-  flex-grow: 1;
+  // flex-grow: 1;
 }
 
 .order-file__icon {
