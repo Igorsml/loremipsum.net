@@ -3,6 +3,7 @@ $whiteColor: #fff;
 $greyColor: #bbb;
 $titleSize: 36px;
 $widthBody: 80%;
+$blueColor: #3e9cdc;
 
 // hover
 $scaleSize: 1.1;
@@ -15,5 +16,18 @@ $transitionHover: 0.2s linear;
 
   &:hover {
     scale: $scaleSize;
+  }
+}
+
+@mixin opacity {
+  opacity: 1;
+  transition: all $transitionHover;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
   }
 }
