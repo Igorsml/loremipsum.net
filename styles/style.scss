@@ -22,7 +22,7 @@ body {
   justify-content: space-between;
   flex-direction: column;
   flex: 1 0 auto;
-  height: 100vh;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   place-items: center;
@@ -154,9 +154,6 @@ input[type="file"] {
 /* -------------------- Main ---------------------- */
 
 .hero {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
 }
 
@@ -288,7 +285,6 @@ input[type="file"] {
 }
 
 .order {
-  padding-top: 810px;
   color: $whiteColor;
 }
 
@@ -441,7 +437,6 @@ input[type="range"] {
 /* -------------------- Footer ---------------------- */
 
 .footer {
-  padding-top: 1610px;
   width: 100%;
   background-color: $bgColor;
 }
@@ -562,7 +557,6 @@ input[type="range"] {
 
   .footer {
     padding: 10px;
-    padding-top: 1760px;
   }
 
   .payment-methods {
@@ -574,6 +568,5 @@ input[type="range"] {
 @media (max-width: 600px) {
   .footer {
     padding: 10px;
-    padding-top: 2000px;
   }
 }
